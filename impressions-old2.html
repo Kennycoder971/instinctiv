@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instinct-IV</title>
+<meta name="keywords" content="Instinct-IV">
+<meta name="description" content="Instinct-IV - Intelligence Vétérinaire">
+<meta name="author" content="Iconia Agency">
+
+<!-- FONTS ONLINE -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<!--MAIN STYLE-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/ionicons.min.css" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+.md-stepper-horizontal {
+	display:table;
+	width:100%;
+	margin:0 auto;
+	background-color:#FFFFFF;
+}
+.md-stepper-horizontal .md-step {
+	display:table-cell;
+	position:relative;
+	padding:24px;
+}
+.md-stepper-horizontal .md-step:hover,
+.md-stepper-horizontal .md-step:active {
+	background-color:rgba(0,0,0,0.04);
+}
+.md-stepper-horizontal .md-step:active {
+	border-radius: 15% / 75%;
+}
+.md-stepper-horizontal .md-step:first-child:active {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.md-stepper-horizontal .md-step:last-child:active {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.md-stepper-horizontal .md-step:hover .md-step-circle {
+	background-color:#757575;
+}
+.md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+.md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+	display:none;
+}
+.md-stepper-horizontal .md-step .md-step-circle {
+	width:80px;
+	height:80px;
+	margin:0 auto;
+	background-color:#999999;
+	border-radius: 50%;
+  border-style: solid;
+  border-color: #c23633;
+	text-align: center;
+	line-height:75px;
+	font-size: 16px;
+	font-weight: 600;
+	color:#FFFFFF;
+}
+.md-stepper-horizontal.green .md-step.active .md-step-circle {
+	background-color:#00AE4D;
+}
+.md-stepper-horizontal.blanc .md-step.active .md-step-circle {
+	background-color:#FFF;
+}
+.md-stepper-horizontal .md-step.active .md-step-circle {
+	background-color: rgb(33,150,243);
+}
+.md-stepper-horizontal .md-step.done .md-step-circle:before {
+	font-family:'FontAwesome';
+	font-weight:100;
+	content: "\f00c";
+}
+.md-stepper-horizontal .md-step.done .md-step-circle *,
+.md-stepper-horizontal .md-step.editable .md-step-circle * {
+	display:none;
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle:before {
+	font-family:'FontAwesome';
+	font-weight:100;
+	content: "\f040";
+}
+.md-stepper-horizontal .md-step .md-step-title {
+	margin-top:16px;
+	font-size:16px;
+	font-weight:600;
+}
+.md-stepper-horizontal .md-step .md-step-title,
+.md-stepper-horizontal .md-step .md-step-optional {
+	text-align: center;
+	color:rgba(0,0,0,.26);
+}
+.md-stepper-horizontal .md-step.active .md-step-title {
+	font-weight: 600;
+	color:rgba(0,0,0,.87);
+}
+.md-stepper-horizontal .md-step.active.done .md-step-title,
+.md-stepper-horizontal .md-step.active.editable .md-step-title {
+	font-weight:600;
+}
+.md-stepper-horizontal .md-step .md-step-optional {
+	font-size:12px;
+}
+.md-stepper-horizontal .md-step.active .md-step-optional {
+	color:rgba(0,0,0,.54);
+}
+.md-stepper-horizontal .md-step .md-step-bar-left,
+.md-stepper-horizontal .md-step .md-step-bar-right {
+	position:absolute;
+	top:66px;
+	height:1px;
+	border-top:1px solid #DDDDDD;
+}
+.md-stepper-horizontal .md-step .md-step-bar-right {
+	right:0;
+	left:55%;
+	margin-left:35px;
+}
+.md-stepper-horizontal .md-step .md-step-bar-left {
+	left:0;
+	right:55%;
+	margin-right:35px;
+}
+.md-step-circle img {
+  width: 50px;
+  filter: invert(1%);
+}
+</style>
+</head>
+<body>
+
+<!-- Page Wrap ===========================================-->
+<div id="wrap">
+  <!-- HEADER ===========================================-->
+  <header class="header-2">
+    <div class="container">
+
+      <!--======= LOGO =========-->
+      <div class="logo"> <a href="#."><img src="logo.png" alt="" style="width: 250px;"></a> </div>
+    </div>
+
+    <!--======= NAVIGATION =========-->
+    <nav class="webimenu">
+      <div class="container">
+       <!-- MENU BUTTON RESPONSIVE -->
+        <div class="menu-toggle"> <i class="fa fa-bars"> </i> </div>
+        <ul class="ownmenu">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="active"><a href="impressions.html">Impression 3d vétérinaire</a>
+          </li>
+          <li><a href="#">Solutions </a>
+            <ul class="dropdown">
+              <li><a href="conception.html">Conception</a></li>
+              <li><a href="simulation.html">Simulation</a></li>
+            </ul></li>
+          <li><a href="catalogue.html">Catalogue </a>
+            <ul class="dropdown">
+              <li><a href="cat-modele-anatomique.html">Modèles Anatomiques</a></li>
+              <li><a href="#">Instrumentation et matériel médical</a></li>
+              <li><a href="#">Implants</a></li>
+              <li><a href="#">Guides chirurgicaux</a></li>
+              <li><a href="#">Planification chirurgicale</a></li>
+              <li><a href="#">Prothèse / Orthèse</a></li>
+              <li><a href="#">Autres</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Partenaires </a>
+          </li>
+          <li><a href="#">Qui sommes nous ?</a></li>
+          <li><a href="#">Contact</a> </li>
+          <a href="#." class="btn-menu btn"> Connexion</a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--======= BANNER =========-->
+  <section class="sub-banner sub-banner-impression">
+    <div class="overlay">
+      <div class="container">
+        <h3>Impression 3d vétérinaire</h3>
+        <p>L’impression 3D est une technique de fabrication qui présente beaucoup d’avantages. Pour pouvoir en exploiter tout le potentiel et ainsi en optimiser l’usage, il est nécessaire de maitriser les étapes clés de la fabrication d’un produit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--======= CONTENT =========-->
+  <div class="content fix-nav-space">
+
+    <!--======= WHY CHOOSE US =========-->
+    <div class="sser-style-2">
+      <section class="offer-services">
+          <div class="container">
+            <!-- Tittle -->
+            <div class="row">
+              <div class="col-sm-3">
+                <div role="tabpanel">
+                  <!--======= NAV TABS =========-->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#principe"  role="tab" data-toggle="tab">Principe <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#contraintes"  role="tab" data-toggle="tab">Les contraintes <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#classification" role="tab" data-toggle="tab">Les Classifications <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#materiaux" role="tab" data-toggle="tab">Les matériaux <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#cao" role="tab" data-toggle="tab">La CAO <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#application" role="tab" data-toggle="tab">Applications médicales <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#veterinaire" role="tab" data-toggle="tab">Impression 3D vétérinaire <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                    <li role="presentation"><a href="#reglement" role="tab" data-toggle="tab">Réglementation et marché <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--======= NAV TABS CONTENT =========-->
+              <div class="col-sm-9">
+                <div class="tab-content">
+
+                  <!--======= HandyMan Repairs =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn active" id="principe">
+                    <h4>Principe</h4>
+
+                    <p>L’impression 3D ou fabrication additive regroupe l’ensemble des procédés de fabrication de pièces en volume par ajout ou agglomération de matière par empilement de couches successives.</p>
+                    <p>Créer un objet en 3 dimension avec une imprimante spéciale à partir d’un fichier ou plan numérique. En usinage conventionnel, la matière est retirée pour former l’objet. Dans la fabrication additive des couches successives sont empilées pour créer l’objet.</p>
+
+                    <div class="md-stepper-horizontal blanc">
+                      <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/idea.svg"/></div>
+                        <div class="md-step-title">Idée - Besoin</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                      <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/check-list.svg"/></div>
+                        <div class="md-step-title">Acquisition</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                      <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/3d.svg"/></div>
+                        <div class="md-step-title">Conception 3D</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                    <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/3d-shape.svg"/></div>
+                        <div class="md-step-title">Optimisation</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                      <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/3d-printer.svg"/></div>
+                        <div class="md-step-title">Impression 3D</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                    <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/validation.svg"/></div>
+                        <div class="md-step-title">Post Traitement et Finition</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                    <div class="md-step active">
+                        <div class="md-step-circle"><img src="images/icons/bone.svg"/></div>
+                        <div class="md-step-title">Objet 3D final</div>
+                        <div class="md-step-bar-left"></div>
+                        <div class="md-step-bar-right"></div>
+                      </div>
+                    </div> </div>
+
+                  <!--======= Contraintes Repairs =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="contraintes">
+                    <h4>Les Contraintes</h4>
+                    <p>Selon le procédé utilisé (ex. présence de supports, traitement de surface etc…)</p>
+                    <p>Selon le matériau utilisé (ex. états de surface – adaptabilité du matériau à l’usage etc…)</p>
+                    <p>Selon la conception réalisée (ex. optimisation , tests numériques de résistance, expertise ingénierie etc…)</p>
+                    <p>Selon l’usage et les contraintes attendues sur le produit fini</p>
+                    <!-- Small Facts -->
+                    <ul class="fact row">
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>impact du procédé – précision – exactitude - tolérance</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>impact du matériau – rendu – précision – comportements biomécaniques - biocompatibilité</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>impact de la conception - acquisition</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>impact fonctionnalité du produit</p>
+                      </li>
+                      <li class="col-sm-12">
+                      </li>
+                    </ul>
+                    <center><p><img src="images/veterinaire/os-3D.png" width="300px"/></p></center>
+                    <p>Pour un produit selon les critères demandés le choix de l’acquisition, conception, matériau et procédé doit être adapté.</p>
+                    <p>Cela demande un travail de fond collaboratif entre les praticiens utilisateurs et les ingénieurs et experts du secteur de l’impression 3D.</p>
+
+                    </div>
+
+                  <!--======= Matériaux LINES =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="classification">
+                    <h4>Classification </h4>
+                    <p>Classification en 7 familles (norme ISO 17296-2)</p>
+                    <div class="col-md-6">
+                    <!-- Small Facts -->
+                    <ul class="fact row">
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Polymérisation résine par laser SLA</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Projection de gouttes de matériau</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Projection liant sur un substrat</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Solidification de poudre sous source d'énergie moyenne à forte puissance</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Projection de poudre dans un flux d'énergie</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Extrusion de matière</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Assemblages de couches à partir de feuilles, plaques</p>
+                      </li>
+                    </ul>
+                  </div>
+                    <div class="col-md-6">
+                      <p><img src="images/veterinaire/SLS.png" width="500px" /></p>
+                      <p><img src="images/veterinaire/protypage.png" width="500px" /></p>
+                    </div>
+                  </div>
+
+                  <!--======= CAO LINES =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="materiaux">
+                    <h4>Les Matériaux</h4>
+                  <div class="col-md-6">
+                    <p>Les plastiques</p>
+                    <!-- Small Facts -->
+                    <ul class="fact row">
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>ABS – Acrylonitrile Butadiène Styrène <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>PLA – Acide PolyLactique matières renouvelables biodégradable <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>ASA – Polystryrène <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>PET - Polytéréphtalate d’éthylène <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>PC – PolyCarbonate <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>PEEK – Polyétheréthercétone <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>PP – Polypropylène Nylon® <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>PVC <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Le développement des matériaux <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Les métaux</p>
+                    <ul class="fact row">
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Acier – inoxydable médical et chirurgical <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Titane – alliages <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Aluminium – souvent sous forme d’alliage <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Chrome-Cobalt <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Métaux précieux – Or Argent Bronze … <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Les céramiques alumine, zircone, hydroxyapatite (HAP), TCP <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Le silicone <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Les composites <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Le bio – printing – peau et os <a data-toggle="tooltip" title="<img src='images/lego.png' width='150px' />">Exemple</a></p>
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+
+                  <!--======= WATER DAMAGE PREVENTION =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="cao">
+                    <h4>La CAO</h4>
+                    <p>Quoi – planification chirurgicale – conception de matériel médical – optimisation de l’objet – Avoir le bon fichier à imprimer pour un résultat optimisé.</p>
+                    <p>Logiciels – gratuits – payants – professionnels</p>
+                    <p>Tout dépend de votre besoin, de l’application/l’usage du produit final et de votre disponibilité</p>
+                    <p>Plus vous participerez aux projets d’Instinct’iv plus nous développerons une offre et une expertise pour répondre au mieux des besoins des vétérinaires.</p>
+                    <p>Faire converger les expertises médicales et chirurgicales des vétérinaires et celles de l’ingénierie de l’impression 3D c’est permettre à ce secteur de développer des solutions qui lui sont propres.</p>
+                    <p>La conception assistée par ordinateur, plus communément appelée CAO regroupe l’ensemble des logiciels de modélisation permettant de concevoir des modèles numériques en 3D. Dans le cadre de l’impression 3D, la CAO permet, à l’aide d’un fichier numérique de type STL ou autre, de demander à l’imprimante 3D de réaliser des pièces physiques. Ainsi, cela offre une lisibilité du fonctionnement et du rendu d’un produit avant qu’il ne soit conçu.</p>
+                    <p>Il reste néanmoins quelques détails à savoir impérativement avant de commencer.</p>                    <!-- Small Facts -->
+                    <ul class="fact row">
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Il existe différents types de logiciels pour le secteur médical, tout dépend de ce que vous avez prévus de faire. Votre but est-il d’imprimer en 3D ou d’obtenir un modèle 3D pour une meilleure visualisation ? Peut-être les deux ? </p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Avant d’utiliser un logiciel de modélisation 3D, vous devez faire attention au format du fichier que vous souhaitez importer. La plupart du temps, les scans sont au format DICOM, un format qui n’est pas reconnu par la plupart des logiciels de modélisation 3D. Cela ne veut pas dire que vous ne pouvez pas utiliser un logiciel de modélisation traditionnel pour vos impression 3D médicales. Il vous faudra simplement utiliser un autre logiciel afin de convertir votre fichier au bon format.</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Votre choix doit être guidé par les spécificités de votre processus de travail et les objectifs de votre projet. Les facteurs à considérer sont les suivants : Le nombre de pièces à imprimer par semaine - Les matériaux nécessaires - La fonction des pièces : prototype visuel, fonctionnel, technique ? - Le nombre de pièces par impression</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>pour vous faire une idée plus précise des capacités des imprimantes. Demandez des informations sur la durée d'impression, la quantité de matériau nécessaire ou encore l'épaisseur des couches.</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Calculez les coûts, estimez l'usage de la machine, la durée d'impression d'une pièce</p>
+                      </li>
+                      <li class="col-sm-12">
+                        <p><i class="fa fa-arrow-circle-right"></i>Participez à des événements organisés par les fournisseurs et les sous-traitants, pour connaître les contrats de service et le coût total de possession des machines</p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!--======= TANKLESS WATER HEATERS =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="application">
+                    <h4>Applications médicales</h4>
+                    <div class="col-md-3"><img src="images/application/cage.png" width="100%"/></div>
+                    <div class="col-md-5"><img src="images/application/main.png" width="100%"/></div>
+                    <div class="col-md-4"><img src="images/application/epaule.png" width="250px"/></div>
+                    <div class="col-md-4"><img src="images/application/os-cage.png" width="100%"/></div>
+                    <div class="col-md-4"><img src="images/application/crane.png" width="250px"/></div>
+                    <div class="col-md-4"><img src="images/application/respirateur.png" width="250px"/></div>
+                    <div class="col-md-5"><img src="images/application/platre.png" width="100%"/></div>
+                    <div class="col-md-7">
+                      <p>Des besoins spécifiques – biocompatibilité – ingénierie biomécanique</p>
+                      <p>Précisions – connaissance anatomiques et comportements des tissus</p>
+                      <p>Stérilisation – radio opaque ou radio transparents – etc…</p>
+                    </div>
+                  </div>
+
+                  <!--======= TANKLESS WATER HEATERS =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="veterinaire">
+                    <h4>Impression 3D vétérinaire</h4>
+                    <p>Dans le monde – principalement anglosaxon – Etats Unis et Royaume Uni – Se développe l’Italie et autres pays d’Europe</p>
+                    <p>Logiciels planifications et services d’impression</p>
+                    <p>Cas cliniques</p>
+                    <p>Un marché</p>
+                    <br>
+                    <p>En France – Instinct’iv est le premier interlocuteur dédié aux vétérinaires qui apporte des solutions en impression 3D</p>
+                    <p>Instinct’iv investit dans les projets de développement des praticiens</p>
+                    <p>Organisation et priorisation de la demande des vétérinaires pour être au plus proche de leurs besoins</p>
+                    <p>Itérations des besoins et pratiques – développement d’une expertise vétérinaire en collaboration avec les praticiens</p>
+                    <br>
+                    <p>Des besoins spécifiques – biocompatibilité – ingénierie biomécanique</p>
+                    <p>Précisions – connaissance anatomiques et comportements des tissus</p>
+                    <p>Stérilisation – radio opaque ou radio transparents – etc…</p>
+                    <p>Les besoins de la médecine Humaine mais aussi des besoins spécifiques</p>
+                    <p>Economiques – Volumes – Réactivité – disponibilité du scanner et du matériel spécifique</p>
+                    <p>C’est en commençant à travailler ensemble que nous trouverons des réponses aux problématiques spécifiques de ce secteur.</p>
+                    <p>Trouver des solutions en partageant les problématiques</p>
+                  </div>
+
+                  <!--======= TANKLESS WATER HEATERS =========-->
+                  <div role="tabpanel" class="tab-pane animated fadeIn" id="reglement">
+                    <h4>Réglementation et marché</h4>
+                    <p>L’impression 3D comme tout procédé industriel est réglementé sur l’ensemble de sa chaine de valeur.</p>
+                    <p>L’usage de l’impression 3D en milieu médical que ce soit pour de la simulation ou de la production de DM est soumise à réglementation.</p>
+                    <p>La notion de DM en milieu vétérinaire ne s’applique pas – de même que la réglementation qui s’y rattache. Ce qui permet une grande liberté de développement et d’usage mais qui peut aussi être risqué pour le praticien.</p>
+                    <p>Instinct’iv a choisi comme partenaires des professionnels de l’impression 3D médicale certifié ISO 13485. Ceci afin de profiter de l’expertise du secteur médical tout en gardant une flexibilité de développement.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+
+    <!--======= Contact Info =========-->
+    <section class="contact-info">
+      <div class="container">
+
+        <h3 style="margin-bottom: 25px;">Une collaboration vous intéresse ?</h3>
+        <!--======= BUTTON =========-->
+        <a href="catalogue.html" class="btn btn-1">Consultez notre catalogue</a>
+      </div>
+    </section>
+  </div>
+
+  <!--======= FOOTER =========-->
+  <footer>
+    <div class="container">
+
+      <!-- Row -->
+      <div class="row">
+
+        <!-- Latest Tweet -->
+        <div class="col-md-3">
+          <div class="latest-tweet">
+            <h5>Actualités</h5>
+            <ul>
+
+              <!--Tweet 1 -->
+              <li>
+                <p><span>#instinct-iv</span> Lancement</p>
+                <span class="date"> - 12 juin 2020</span> </li>
+
+              <!--Tweet 2 -->
+              <li>
+                <p><span>#instinct-iv</span> Première plateforme de service d’impression 3D dédiée aux vétérinaires praticiens en France</p>
+                <span class="date"> - 01 septembre 2020</span> </li>
+
+              <!--Tweet 3 -->
+              <li>
+                <p><span>#instinct-iv</span> A découvrir nos partenaires - professionnels de l’impression 3D médical – Addidream – Ennoïa – 3DMedlab</p>
+                <span class="date"> - 01 octobre 2020</span> </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- About Us -->
+        <div class="col-md-6">
+          <div class="small-info"> <img src="images/logo-white.png" alt="">
+            <p>Impulser les innovations vétérinaires de demain.
+              <br>Développer des produits et services issus de la pratique vétérinaire</p>
+            <ul class="social_icons">
+              <li class="linkedin"><a href="https://www.linkedin.com/company/instinct-iv/"><i class="fa fa-linkedin"></i> </a></li>
+            </ul>
+
+            <!-- News Letter -->
+            <h5>Newsletter</h5>
+            <form>
+              <input type="email" placeholder="Enter your email here" required>
+              <button type="submit"> Envoyer</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Patient Guide -->
+        <div class="col-md-3">
+          <div class="links text-right">
+            <h5>Liens</h5>
+            <ul>
+              <li><a href="#.">Contacts</a></li>
+              <li><a href="#."> CGV</a></li>
+              <li><a href="#."> Accueil</a></li>
+            </ul>
+
+            <!-- Timing -->
+            <div class="timing">
+              <h5>Disponible sur RDV</h5>
+              <p>En clinique ou à distance</p>
+              <p>Du Lundi au Vendredi de 9h à 18h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rights -->
+    <div class="rights">
+      <p>© 2021 Instinct-IV SAS </p>
+    </div>
+  </footer>
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/own-menu.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.superslides.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/appointment.js"></script>
+<script src="js/jquery.downCount.js"></script>
+<script src="js/counter.js"></script>
+<script>$('a[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'bottom',
+    html: true
+});</script>
+<script src="js/main.js"></script>
+</body>
+</html>
