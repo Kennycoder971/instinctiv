@@ -4503,3 +4503,69 @@ footer .timing p span {
 	background-color: #35506b;
 	border-color: #35506b;
 }
+
+
+/*
+Kenny
+*/
+/* Accueil */
+.accompagons  {
+	margin: 3rem 0;
+}
+.accompagons h3 {
+	margin-bottom: 2.5rem;
+}
+
+.accompagons ul li{
+	list-style: circle !important;
+}
+
+#why-choose {
+	margin-top: 2rem;
+	padding: 0;
+}
+
+#why-choose ul li ul li{
+	list-style: circle !important;
+	margin-bottom: .5rem;
+}
+
+#why-choose ul li ul li{
+	list-style: circle !important;
+	margin-bottom: .5rem;
+}
+
+/* Kenny */
+/* Impression */
+
+/* J'ai fait une classe .why-choose aussi pour rajouter les icon avant les h6 */
+.why-choose {
+	margin: 3rem 0;
+}
+
+.why-choose ul li {
+	margin-bottom: .5rem;
+}
+.why-choose ul li ul li{
+	list-style: circle !important;
+	
+}
+
+.why-choose ul li{
+	margin-bottom: 2rem;
+}
+.why-choose ul li:before {
+    content: '\f05d';
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    left: -7px;
+    top: 2px;
+    color: #c23633;
+    position: absolute;
+}
+
+@media (max-width:768px) {
+	.why-choose ul li:before {
+		top: -6px !important;
+	}
+}
