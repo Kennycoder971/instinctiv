@@ -4569,3 +4569,58 @@ Kenny
 		top: -6px !important;
 	}
 }
+/* Kenny */
+/* Solutions */
+
+.txt-solutions {
+	margin: 6rem 0;
+}
+
+.txt-solutions p {
+	margin: 2rem 0 ;
+	font-size: 1.6rem;
+}
+
+.txt-solutions ul li {
+	list-style: circle;
+	margin-bottom: 1rem;
+}
+
+/* Kenny */
+/* Qui nous sonnes */
+
+.qui-nous-sommes {
+	margin: 5rem 0;
+	
+}
+.qui-nous-sommes .container-txt {
+	width: 95%;
+	max-width: 800px;
+	margin:0 auto;
+	box-shadow: 0px 4px 5px rgba(0,0,0,.5);
+	padding: 3rem 5rem;
+}
+
+.qui-nous-sommes .container-txt p{
+	line-height: 38px;
+	font-size: 16px;
+}
+
+section.nos-valeurs {
+	float: none;
+	margin: 5rem 0;
+}
+
+section.nos-valeurs h3{
+	margin-bottom: 3rem;
+}
+
+section.nos-valeurs ul li:before {
+    content: '\f05d';
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    left: -7px;
+    top: 2px;
+    color: #c23633;
+    position: absolute;
+}
