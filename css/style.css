@@ -4563,7 +4563,18 @@ Kenny
     color: #c23633;
     position: absolute;
 }
+#pourquoi h3 {
+	font-size: 1.5rem;
+}
+ .list-hyphen li{
+	list-style: circle;
+	margin-left: 5rem;
+	margin-bottom: 1rem;
+}
 
+#que .list-hyphen {
+	margin-bottom: 2rem;
+}
 @media (max-width:768px) {
 	.why-choose ul li:before {
 		top: -6px !important;
@@ -4587,7 +4598,7 @@ Kenny
 }
 
 /* Kenny */
-/* Qui nous sonnes */
+/* Qui nous sommes */
 
 .qui-nous-sommes {
 	margin: 5rem 0;
@@ -4624,3 +4635,4 @@ section.nos-valeurs ul li:before {
     color: #c23633;
     position: absolute;
 }
+
