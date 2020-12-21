@@ -659,11 +659,12 @@ header.header-2 nav {
 	text-align: center;
 	padding: 20%;
 	padding-top: 10%;
-	font-family: "Typo Slab Regular";
 	background-image: url(../images/veterinaire/128105-9v9wbttstucoul.jpg);
 	background-blend-mode: saturation;
 	background-size: 1450px;
 	background-position: top;
+	width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .main-bnr-text h5 {
 	color: #fff;
@@ -672,7 +673,7 @@ header.header-2 nav {
 	font-weight: 500;
 }
 .main-bnr-text h1 {
-	color: #fff;
+	color: #c23633;
 	font-weight: bold;
 	margin-bottom: 50px;
 }
@@ -683,8 +684,7 @@ header.header-2 nav {
 
 }
 .main-bnr-text p {
-	color: #fff;
-	background-color: #0000002e;
+	color: #000000;
 }
 .main-bnr-bg {
 	background-image: url(../images/female-doctor-using-medical-scissors-over-surgery-KZUPW9K.jpg);
